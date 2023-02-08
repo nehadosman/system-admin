@@ -1,0 +1,14 @@
+mkdir iti-0
+ls
+touch iti-0/file1.txt
+echo hell9 all> iti-0/file1.txt
+touch iti-0/file2.txt
+ls iti-0/
+cat iti-0/file1.txt | tr "9" "o" > iti-0/file2.txt
+cat iti-0/file2.txt
+rm iti-0/file1.txt
+ls /var >lisiting.txt
+mv lisiting.txt list_output.txt
+nl list_output.txt > list_output_number.txt
+tail -n 5 list_output_number.txt 
+
