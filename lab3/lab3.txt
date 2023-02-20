@@ -1,0 +1,34 @@
+ls /home ----> nehad
+sudo useradd -m itiuser1
+sudo useradd -m itiuser2
+ls /home ----> itiuser1 itiuser2 nehad
+sudo groupadd os_team
+mkdir os_team_workspace
+sudo chgrp os_team os_team_workspace
+sudo chmod u+s os_team_workspace
+sudo usermod -a -G os_team itiuser1
+sudo usermod -a -G os_team itiuser2
+groups itiuser1
+groups itiuser2
+cd os_team_workspace
+sudo passwd itiuser1
+sudo passwd itiuser2
+su itiuser1
+mkdir mydir
+exit
+su itiuser2
+mkdir mydir2
+exit
+su itiuser1
+ls -ld mydir
+exit 
+su itiuser2
+ls -ld mydir2
+exit 
+pstree
+ps -aux
+top
+kill -9 7613
+sudo tail -f /var/log/syslog 
+
+
